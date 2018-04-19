@@ -155,7 +155,8 @@ class Dashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <LineChart width={900} height={300} data={this.line1data}>
-                        <Line type="monotone" dataKey="y" stroke="#8884d8" />
+                        <Line type="monotone" dataKey="Average playtime in the course" stroke="#8884d8" />
+                        <Line type="monotone" dataKey="Time I spent" stroke="#82ca9d" />
                         <XAxis
                           dataKey="x"
                           label={

@@ -23,18 +23,18 @@ const dashboardRoutes = [
     name: "Admin Dashboard",
     icon: "pe-7s-graph",
     component: Dashboard
-  },    
-  {
-    path: "/studashboard",
-    name: "Student Dashboard",
-    icon: "pe-7s-graph",
-    component: stuDashboard
   },
   {
     path: "/instrudashboard",
     name: "Instructor Dashboard",
     icon: "pe-7s-graph",
     component: InstruDashboard
+  },    
+  {
+    path: "/studashboard",
+    name: "Student Dashboard",
+    icon: "pe-7s-graph",
+    component: stuDashboard
   },
   {
     path: "/user",
@@ -44,24 +44,24 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    name: "Table List",
-    icon: "pe-7s-note2",
+    name: "Leader Board",
+    icon: "pe-7s-users",
     component: TableList
   },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "pe-7s-news-paper",
-    component: Typography
-  },
-  { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
-  { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "pe-7s-bell",
-    component: Notifications
-  },
+  // {
+  //   path: "/typography",
+  //   name: "Typography",
+  //   icon: "pe-7s-news-paper",
+  //   component: Typography
+  // },
+  //{ path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
+  // { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
+  // {
+  //   path: "/notifications",
+  //   name: "Notifications",
+  //   icon: "pe-7s-bell",
+  //   component: Notifications
+  // },
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
 ];
 
