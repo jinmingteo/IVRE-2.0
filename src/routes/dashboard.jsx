@@ -1,5 +1,5 @@
 import Dashboard from "views/Dashboard/Dashboard";
-import stuDashboard from "views/Dashboard/StuDashboard";
+import stuDashboard from "views/Dashboard/StuDashBoard";
 import InstruDashboard from "views/Dashboard/InstruDashboard";
 import QnA from "views/QnA/QuestionAnswer";
 import UserProfile from "views/UserProfile/UserProfile";
