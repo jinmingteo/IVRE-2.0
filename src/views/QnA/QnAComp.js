@@ -70,7 +70,7 @@ export default class QuestionAnswer extends React.Component {
                 statsIcon="fa fa-check"
                 content={
                   <div className="ct-chart">
-                      <Treemap width={1200} height={250} data={this.props.charts.data}
+                      <Treemap width={900} height={250} data={this.props.charts.data}
                         dataKey="size"
                         ratio={4 / 3}
                         stroke="#fff"
