@@ -115,7 +115,10 @@ class Dashboard extends Component {
       this.bar5data = {x: "no data", y: 0}
       // this.
       // this.title1 = "title";
-
+      this.bar6title = "title";
+      this.bar6xaxis = "x-axis";
+      this.bar6yaxis = "y-axis";
+      this.bar6data = {x: "no data", y: 0}
   }
   
   componentWillReceiveProps(newProps) {
@@ -168,7 +171,12 @@ class Dashboard extends Component {
             this.bar5yaxis = this.props.newCharts[key].yaxisLabel;
             this.bar5data = this.props.newCharts[key].data;
           }
-
+          if (key == "Bar6"){
+            this.bar6title = this.props.newCharts[key].title;
+            this.bar6xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar6yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar6data = this.props.newCharts[key].data;
+          }
       }
     }
   }
@@ -338,13 +346,13 @@ class Dashboard extends Component {
                 stats="Updated Recently"
                 statsIcon="fa fa-check"
                 content={
-                  <div >
-                  <PieChart width={800} height={600}>
+                  <div class="center-div">
+                  <PieChart width={800} height={400}>
                     <Pie
                       data={this.pie1data}
                       cx={200}
                       cy={200}
-                      outerRadius={90}
+                      outerRadius={150}
                       fill="#82ca9d"
                       label
                     />
@@ -425,6 +433,48 @@ class Dashboard extends Component {
                         label={
                           <AxisLabel axisType="yAxis" width={400} height={300}>
                             {this.bar5yaxis}
+                          </AxisLabel>
+                        }
+                      />
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="y" fill="#8884d8" />
+                    </BarChart>
+                  </div>
+                }
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
+              <Card
+                //id="chartActivity"
+                title={this.bar6title}
+                //category="All products including Taxes"
+                stats="Updated Recently"
+                statsIcon="fa fa-check"
+                content={
+                  <div className="ct-chart">
+                      <BarChart
+                      width={1300}
+                      height={300}
+                      data={this.bar6data}
+                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                    >
+                      <XAxis
+                        dataKey="x"
+                        label={
+                          <AxisLabel axisType="xAxis" width={400} height={300}>
+                            {this.bar6xaxis}
+                          </AxisLabel>
+                        }
+                      />
+                      <YAxis
+                        dataKey="y"
+                        label={
+                          <AxisLabel axisType="yAxis" width={400} height={300}>
+                            {this.bar6yaxis}
                           </AxisLabel>
                         }
                       />

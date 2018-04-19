@@ -1,4 +1,5 @@
 import Dashboard from "views/Dashboard/Dashboard";
+import stuDashboard from "views/Dashboard/StuDashboard";
 import InstruDashboard from "views/Dashboard/InstruDashboard";
 import UserProfile from "views/UserProfile/UserProfile";
 import TableList from "views/TableList/TableList";
@@ -11,13 +12,19 @@ import Upgrade from "views/Upgrade/Upgrade";
 const dashboardRoutes = [
   {
     path: "/dashboard",
-    name: "Dashboard",
+    name: "Admin Dashboard",
     icon: "pe-7s-graph",
     component: Dashboard
   },
   {
+    path: "/studashboard",
+    name: "Student Dashboard",
+    icon: "pe-7s-graph",
+    component: stuDashboard
+  },
+  {
     path: "/instrudashboard",
-    name: "Dashboard",
+    name: "Instructor Dashboard",
     icon: "pe-7s-graph",
     component: InstruDashboard
   },
@@ -46,13 +53,6 @@ const dashboardRoutes = [
     name: "Notifications",
     icon: "pe-7s-bell",
     component: Notifications
-  },
-  {
-    upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "pe-7s-rocket",
-    component: Upgrade
   },
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
 ];

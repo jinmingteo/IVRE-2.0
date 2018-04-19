@@ -1,3 +1,5 @@
+//for Student
+
 import React, { Component } from "react";
 import ChartistGraph from "react-chartist";
 import { Grid, Row, Col } from "react-bootstrap";
@@ -58,7 +60,7 @@ const AxisLabel = ({
 };
 
 const mapStateToProps = state => {
-  return {charts: state.stuVal};
+  return {newCharts: state.stuVal};
 }
 
 class Dashboard extends Component {
@@ -72,140 +74,107 @@ class Dashboard extends Component {
     }
     return legend;
   }
+
+  constructor(props) {
+      super(props);
+      this.state = this.props
+      this.rechartsArr = [];
+      //console.log(props.newCharts);
+      this.stuname = "name";
+      this.stulevel = 0;
+      this.rank = 0;
+
+      this.line1title = "title";
+      this.line1xaxis = "x-axis";
+      this.line1yaxis = "y-axis";
+      this.line1data = {x: "no data", y: 0}
+  }
+  
+  componentWillReceiveProps(newProps) {
+    if (newProps !== this.props) {
+      this.props = newProps
+      console.log("newstuff");
+      console.log(this.props.newCharts);
+      for (var key in this.props.newCharts) {
+          if (key == "Line1"){
+            this.line1title = this.props.newCharts[key].title;
+            this.line1xaxis = this.props.newCharts[key].xaxisLabel;
+            this.line1yaxis = this.props.newCharts[key].yaxisLabel;
+            this.line1data = this.props.newCharts[key].data;
+          }
+          if (key == "Cat"){
+            this.stuname = this.props.newCharts[key].name;
+            this.stulevel = this.props.newCharts[key].levels;
+            this.rank = this.props.newCharts[key].rank;
+          }
+      }
+    }
+  }
+
   render() {
     return (
       <div className="content">
         <Grid fluid>
           <Row>
-            <Col lg={3} sm={6}>
+            <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-server text-warning" />}
-                statsText="Capacity"
-                statsValue="105GB"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
+                bigIcon={<i className="pe-7s-id" />}
+                statsText="Name"
+                statsValue= {this.stuname}
+                //statsIcon={<i className="fa fa-refresh" />}
+                //statsIconText="Updated now"
               />
             </Col>
-            <Col lg={3} sm={6}>
+            <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-wallet text-success" />}
-                statsText="Revenue"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-calendar-o" />}
-                statsIconText="Last day"
+                bigIcon={<i className="pe-7s-cup" />}
+                statsText="Level"
+                statsValue={this.stulevel}
+                //statsIcon={<i className="fa fa-calendar-o" />}
+                //statsIconText="Last day"
               />
             </Col>
-            <Col lg={3} sm={6}>
+            <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-graph1 text-danger" />}
-                statsText="Errors"
-                statsValue="23"
-                statsIcon={<i className="fa fa-clock-o" />}
-                statsIconText="In the last hour"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="fa fa-twitter text-info" />}
-                statsText="Followers"
-                statsValue="+45"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
+                bigIcon={<i className="pe-7s-medal" />}
+                statsText="Rank"
+                statsValue={this.rank}
+                //statsIcon={<i className="fa fa-clock-o" />}
+                //statsIconText="In the last hour"
               />
             </Col>
           </Row>
           <Row>
-            <Col md={8}>
+           <Col md={12}>
               <Card
-                statsIcon="fa fa-history"
-                id="chartHours"
-                title="Users Behavior"
-                category="24 Hours performance"
-                stats="Updated 3 minutes ago"
-                content={
-                  <div className="ct-chart">
-                    <LineChart width={400} height={400} data={this.props.charts.data}>
-                    <Line type="monotone" dataKey="y" stroke="#8884d8" />
-                    <XAxis
-                      dataKey="x"
-                      label={
-                        <AxisLabel axisType="xAxis" width={400} height={400}>
-                          {this.props.charts.xaxisLabel}
-                        </AxisLabel>
-                      }
-                    />
-                    <YAxis
-                      label={
-                        <AxisLabel axisType="yAxis" width={400} height={400}>
-                          {this.props.charts.yaxisLabel}
-                        </AxisLabel>
-                      }
-                    />
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <Tooltip />
-                    <Legend />
-                    </LineChart>            
-                  </div>
-                }
-                
-              />
-            </Col>
-            <Col md={4}>
-              <Card
-                statsIcon="fa fa-clock-o"
-                title="Email Statistics"
-                category="Last Campaign Performance"
-                stats="Campaign sent 2 days ago"
-                content={
-                  <div
-                    id="chartPreferences"
-                    className="ct-chart ct-perfect-fourth"
-                  >
-                    <ChartistGraph data={dataPie} type="Pie" />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendPie)}</div>
-                }
-              />
-            </Col>
-          </Row>
-
-          <Row>
-            <Col md={6}>
-              <Card
-                id="chartActivity"
-                title="2014 Sales"
-                category="All products including Taxes"
-                stats="Data information certified"
+                //id="chartActivity"
+                title={this.line1title}
+                //category="All products including Taxes"
+                stats="Updated Recently"
                 statsIcon="fa fa-check"
                 content={
                   <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataBar}
-                      type="Bar"
-                      options={optionsBar}
-                      responsiveOptions={responsiveBar}
-                    />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendBar)}</div>
-                }
-              />
-            </Col>
-
-            <Col md={6}>
-              <Card
-                title="Tasks"
-                category="Backend development"
-                stats="Updated 3 minutes ago"
-                statsIcon="fa fa-history"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <Tasks />
-                    </table>
+                      <LineChart width={1300} height={300} data={this.line1data}>
+                        <Line type="monotone" dataKey="y" stroke="#8884d8" />
+                        <XAxis
+                          dataKey="x"
+                          label={
+                            <AxisLabel axisType="xAxis" width={400} height={300}>
+                              {this.line1xaxis}
+                            </AxisLabel>
+                          }
+                        />
+                        <YAxis
+                          label={
+                            <AxisLabel axisType="yAxis" width={400} height={300}>
+                              {this.line1yaxis}
+                            </AxisLabel>
+                          }
+                        />
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <Tooltip />
+                        <Legend />
+                      </LineChart>
                   </div>
                 }
               />

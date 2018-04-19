@@ -9,6 +9,12 @@
 	font-style: normal;
 }
 
+.center-div
+{
+     margin: 0 auto;
+     width: 500px; 
+}
+
 [class^="pe-7s-"], [class*=" pe-7s-"] {
 	display: inline-block;
 	font-family: 'Pe-icon-7-stroke';

@@ -1,69 +1,69 @@
-//for instructor
+//for Admin
 
 import React, { Component } from "react";
-import ChartistGraph from "react-chartist";
 import { Grid, Row, Col } from "react-bootstrap";
 import { connect } from 'react-redux';
 import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
-import { Tasks } from "components/Tasks/Tasks.jsx";
-import {
-  dataPie,
-  legendPie,
-  dataSales,
-  optionsSales,
-  responsiveSales,
-  legendSales,
-  dataBar,
-  optionsBar,
-  responsiveBar,
-  legendBar
-} from "variables/Variables.jsx";
-
-import {
-  PieChart,
-  Pie,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend
-} from "recharts";
-import { BarChart, Bar } from "recharts";
-
-const AxisLabel = ({
-  axisType,
-  x = 0,
-  y = 0,
-  width,
-  height,
-  stroke,
-  children
-}) => {
-  const isVert = axisType === "yAxis";
-  const cx = isVert ? x + 20 : x + width / 2;
-  const cy = isVert ? height / 2 + y : y + height;
-  const rot = isVert ? `270 ${cx} ${cy}` : 0;
-  return (
-    <text
-      x={cx}
-      y={cy}
-      transform={`rotate(${rot})`}
-      textAnchor="middle"
-      stroke={stroke}
-    >
-      {children}
-    </text>
-  );
-};
+import { Treemap, Tooltip} from "recharts";
 
 const mapStateToProps = state => {
-  return {newCharts: state.instVal};
+  return {newCharts: state.ansVal};
 }
 
-class InstruDashboard extends Component {
+const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
+
+const CustomizedContent = React.createClass({
+  render() {
+    const { root, depth, x, y, width, height, index, payload, colors, rank, name } = this.props;
+
+    return (
+      <g>
+        <rect
+          x={x}
+          y={y}
+          width={width}
+          height={height}
+          style={{
+            fill: depth < 2 ? colors[Math.floor(index % 6)] : 'none',
+            stroke: '#fff',
+            strokeWidth: 2 / (depth + 1e-10),
+            strokeOpacity: 1 / (depth + 1e-10),
+          }}
+        />
+        {
+          depth === 1 ?
+          <text
+            x={x + width / 2}
+            y={y + height / 2 + 7}
+            textAnchor="middle"
+            fill="#fff"
+            fontSize={14}
+          >
+            {name}
+          </text>
+          : null
+        }
+        {
+          depth === 1 ?
+          <text
+            x={x + 4}
+            y={y + 18}
+            fill="#fff"
+            fontSize={16}
+            fillOpacity={0.9}
+          >
+            {index + 1}
+          </text>
+          : null
+        }
+      </g>
+    );
+  }
+});
+
+
+class Dashboard extends Component {
   createLegend(json) {
     var legend = [];
     for (var i = 0; i < json["names"].length; i++) {
@@ -80,11 +80,15 @@ class InstruDashboard extends Component {
       this.state = this.props
       this.rechartsArr = [];
       //console.log(props.newCharts);
-      this.line1title = "title";
-      this.line1xaxis = "x-axis";
-      this.line1yaxis = "y-axis";
-      this.line1data = {x: "no data", y: 0}
+      this.pri = 0;
+      this.sec = 0;
+      this.ter = 0;
 
+      this.pie1title = "title";
+      this.pie1xaxis = "x-axis";
+      this.pie1yaxis = "y-axis";
+      this.pie1data = {x: "no data", y: 0}
+      
       this.bar1title = "title";
       this.bar1xaxis = "x-axis";
       this.bar1yaxis = "y-axis";
@@ -105,9 +109,16 @@ class InstruDashboard extends Component {
       this.bar4yaxis = "y-axis";
       this.bar4data = {x: "no data", y: 0}
       
+      this.bar5title = "title";
+      this.bar5xaxis = "x-axis";
+      this.bar5yaxis = "y-axis";
+      this.bar5data = {x: "no data", y: 0}
       // this.
       // this.title1 = "title";
-
+      this.bar6title = "title";
+      this.bar6xaxis = "x-axis";
+      this.bar6yaxis = "y-axis";
+      this.bar6data = {x: "no data", y: 0}
   }
   
   componentWillReceiveProps(newProps) {
@@ -126,6 +137,7 @@ class InstruDashboard extends Component {
             this.pie1xaxis = this.props.newCharts[key].xaxisLabel;
             this.pie1yaxis = this.props.newCharts[key].yaxisLabel;
             this.pie1data = this.props.newCharts[key].data;
+            //console.log(this.pie1data)
           }
           if (key == "Bar1"){
             this.bar1title = this.props.newCharts[key].title;
@@ -153,13 +165,18 @@ class InstruDashboard extends Component {
             this.bar4yaxis = this.props.newCharts[key].yaxisLabel;
             this.bar4data = this.props.newCharts[key].data;
           }
-          if (key == "Line1"){
-            this.line1title = this.props.newCharts[key].title;
-            this.line1xaxis = this.props.newCharts[key].xaxisLabel;
-            this.line1yaxis = this.props.newCharts[key].yaxisLabel;
-            this.line1data = this.props.newCharts[key].data;
+          if (key == "Bar5"){
+            this.bar5title = this.props.newCharts[key].title;
+            this.bar5xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar5yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar5data = this.props.newCharts[key].data;
           }
-
+          if (key == "Bar6"){
+            this.bar6title = this.props.newCharts[key].title;
+            this.bar6xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar6yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar6data = this.props.newCharts[key].data;
+          }
       }
     }
   }
@@ -169,17 +186,46 @@ class InstruDashboard extends Component {
       <div className="content">
         <Grid fluid>
           <Row>
-            <Col md={12}>
+            <Col lg={4} sm={6}>
+              <StatsCard
+                bigIcon={<i className="pe-7s-culture" />}
+                statsText="Primary School"
+                statsValue= {this.pri}
+                //statsIcon={<i className="fa fa-refresh" />}
+                //statsIconText="Updated now"
+              />
+            </Col>
+            <Col lg={4} sm={6}>
+              <StatsCard
+                bigIcon={<i className="pe-7s-culture" />}
+                statsText="Secondary School"
+                statsValue={this.sec}
+                //statsIcon={<i className="fa fa-calendar-o" />}
+                //statsIconText="Last day"
+              />
+            </Col>
+            <Col lg={4} sm={6}>
+              <StatsCard
+                bigIcon={<i className="pe-7s-culture" />}
+                statsText="Tertiary School"
+                statsValue={this.ter}
+                //statsIcon={<i className="fa fa-clock-o" />}
+                //statsIconText="In the last hour"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={4}>
               <Card
-                //id="chartActivity"
-                title={this.bar1title}
-                //category="All products including Taxes"
-                stats="Updated Recently"
-                statsIcon="fa fa-check"
+                statsIcon="fa fa-history"
+                //id="chartHours"
+                title= {this.bar1title}
+                //category="24 Hours performance"
+                stats="Updated recently"
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={1300}
+                      width={400}
                       height={300}
                       data={this.bar1data}
                       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -209,9 +255,7 @@ class InstruDashboard extends Component {
                 }
               />
             </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
+            <Col md={4}>
               <Card
                 statsIcon="fa fa-history"
                 //id="chartHours"
@@ -221,7 +265,7 @@ class InstruDashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={600}
+                      width={400}
                       height={300}
                       data={this.bar2data}
                       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -251,7 +295,7 @@ class InstruDashboard extends Component {
                 }
               />
             </Col>
-            <Col md={6}>
+            <Col md={4}>
               <Card
                 statsIcon="fa fa-history"
                 //id="chartHours"
@@ -261,7 +305,7 @@ class InstruDashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={600}
+                      width={400}
                       height={300}
                       data={this.bar3data}
                       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -287,6 +331,34 @@ class InstruDashboard extends Component {
                       <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
+                  </div>
+                }
+              />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col md={12}>
+              <Card
+                //id="chartActivity"
+                title={this.pie1title}
+                //category="All products including Taxes"
+                stats="Updated Recently"
+                statsIcon="fa fa-check"
+                content={
+                  <div class="center-div">
+                  <PieChart width={800} height={400}>
+                    <Pie
+                      data={this.pie1data}
+                      cx={200}
+                      cy={200}
+                      outerRadius={150}
+                      fill="#82ca9d"
+                      label
+                    />
+                    <Tooltip />
+                  </PieChart>
+                    
                   </div>
                 }
               />
@@ -336,33 +408,81 @@ class InstruDashboard extends Component {
             <Col md={6}>
               <Card
                 //id="chartActivity"
-                title={this.line1title}
+                title={this.bar5title}
                 //category="All products including Taxes"
                 stats="Updated Recently"
                 statsIcon="fa fa-check"
                 content={
                   <div className="ct-chart">
-                      <LineChart width={600} height={300} data={this.line1data}>
-                        <Line type="monotone" dataKey="y" stroke="#8884d8" />
-                        <XAxis
-                          dataKey="x"
-                          label={
-                            <AxisLabel axisType="xAxis" width={400} height={300}>
-                              {this.line1xaxis}
-                            </AxisLabel>
-                          }
-                        />
-                        <YAxis
-                          label={
-                            <AxisLabel axisType="yAxis" width={400} height={300}>
-                              {this.line1yaxis}
-                            </AxisLabel>
-                          }
-                        />
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <Tooltip />
-                        <Legend />
-                      </LineChart>
+                      <BarChart
+                      width={600}
+                      height={300}
+                      data={this.bar5data}
+                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                    >
+                      <XAxis
+                        dataKey="x"
+                        label={
+                          <AxisLabel axisType="xAxis" width={400} height={300}>
+                            {this.bar5xaxis}
+                          </AxisLabel>
+                        }
+                      />
+                      <YAxis
+                        dataKey="y"
+                        label={
+                          <AxisLabel axisType="yAxis" width={400} height={300}>
+                            {this.bar5yaxis}
+                          </AxisLabel>
+                        }
+                      />
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="y" fill="#8884d8" />
+                    </BarChart>
+                  </div>
+                }
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
+              <Card
+                //id="chartActivity"
+                title={this.bar6title}
+                //category="All products including Taxes"
+                stats="Updated Recently"
+                statsIcon="fa fa-check"
+                content={
+                  <div className="ct-chart">
+                      <BarChart
+                      width={1300}
+                      height={300}
+                      data={this.bar6data}
+                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                    >
+                      <XAxis
+                        dataKey="x"
+                        label={
+                          <AxisLabel axisType="xAxis" width={400} height={300}>
+                            {this.bar6xaxis}
+                          </AxisLabel>
+                        }
+                      />
+                      <YAxis
+                        dataKey="y"
+                        label={
+                          <AxisLabel axisType="yAxis" width={400} height={300}>
+                            {this.bar6yaxis}
+                          </AxisLabel>
+                        }
+                      />
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="y" fill="#8884d8" />
+                    </BarChart>
                   </div>
                 }
               />
@@ -374,4 +494,4 @@ class InstruDashboard extends Component {
   }
 }
 
-export default connect(mapStateToProps)(InstruDashboard);
+export default connect(mapStateToProps)(Dashboard);
