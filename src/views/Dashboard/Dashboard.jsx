@@ -225,11 +225,11 @@ class Dashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={400}
+                      width={300}
                       height={300}
                       data={this.bar1data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                    >
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
+                      >
                       <XAxis
                         dataKey="x"
                         label={
@@ -265,11 +265,11 @@ class Dashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={400}
+                      width={300}
                       height={300}
                       data={this.bar2data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                    >
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
+                      >
                       <XAxis
                         dataKey="x"
                         label={
@@ -305,11 +305,11 @@ class Dashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={400}
+                      width={300}
                       height={300}
                       data={this.bar3data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                    >
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
+                      >
                       <XAxis
                         dataKey="x"
                         label={
@@ -350,12 +350,13 @@ class Dashboard extends Component {
                   <PieChart width={800} height={400}>
                     <Pie
                       data={this.pie1data}
-                      cx={200}
-                      cy={200}
-                      outerRadius={150}
+                      cx={280}
+                      cy={190}
+                      outerRadius={160}
                       fill="#82ca9d"
                       label
                     />
+
                     <Tooltip />
                   </PieChart>
                     
@@ -374,12 +375,12 @@ class Dashboard extends Component {
                 statsIcon="fa fa-check"
                 content={
                   <div className="ct-chart">
-                      <BarChart
-                      width={600}
+                     <BarChart
+                      width={400}
                       height={300}
                       data={this.bar4data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                    >
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
+                      >
                       <XAxis
                         dataKey="x"
                         label={
@@ -415,11 +416,11 @@ class Dashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={600}
+                      width={400}
                       height={300}
                       data={this.bar5data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                    >
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
+                      >
                       <XAxis
                         dataKey="x"
                         label={
@@ -457,7 +458,7 @@ class Dashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={1300}
+                      width={900}
                       height={300}
                       data={this.bar6data}
                       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
