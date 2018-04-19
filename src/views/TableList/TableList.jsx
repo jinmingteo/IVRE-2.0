@@ -12,8 +12,8 @@ class TableList extends Component {
           <Row>
             <Col md={12}>
               <Card
-                title="Striped Table with Hover"
-                category="Here is a subtitle for this table"
+                title="LeaderBoard"
+                category="Students are ranked based on the total number of levels completed"
                 ctTableFullWidth
                 ctTableResponsive
                 content={
