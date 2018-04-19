@@ -179,10 +179,10 @@ class InstruDashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={1300}
+                      width={900}
                       height={300}
                       data={this.bar1data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
                     >
                       <XAxis
                         dataKey="x"
@@ -221,10 +221,10 @@ class InstruDashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={600}
+                      width={400}
                       height={300}
                       data={this.bar2data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
                     >
                       <XAxis
                         dataKey="x"
@@ -261,10 +261,10 @@ class InstruDashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={600}
+                      width={400}
                       height={300}
                       data={this.bar3data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
                     >
                       <XAxis
                         dataKey="x"
@@ -303,10 +303,10 @@ class InstruDashboard extends Component {
                 content={
                   <div className="ct-chart">
                       <BarChart
-                      width={600}
+                      width={400}
                       height={300}
                       data={this.bar4data}
-                      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
                     >
                       <XAxis
                         dataKey="x"
@@ -342,7 +342,8 @@ class InstruDashboard extends Component {
                 statsIcon="fa fa-check"
                 content={
                   <div className="ct-chart">
-                      <LineChart width={600} height={300} data={this.line1data}>
+                      <LineChart width={400} height={300} data={this.line1data}
+                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}>
                         <Line type="monotone" dataKey="y" stroke="#8884d8" />
                         <XAxis
                           dataKey="x"

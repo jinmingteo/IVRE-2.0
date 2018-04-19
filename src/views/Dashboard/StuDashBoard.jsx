@@ -154,7 +154,7 @@ class Dashboard extends Component {
                 statsIcon="fa fa-check"
                 content={
                   <div className="ct-chart">
-                      <LineChart width={1300} height={300} data={this.line1data}>
+                      <LineChart width={900} height={300} data={this.line1data}>
                         <Line type="monotone" dataKey="y" stroke="#8884d8" />
                         <XAxis
                           dataKey="x"
