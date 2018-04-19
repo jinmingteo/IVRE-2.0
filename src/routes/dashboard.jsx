@@ -1,6 +1,7 @@
 import Dashboard from "views/Dashboard/Dashboard";
 import stuDashboard from "views/Dashboard/StuDashboard";
 import InstruDashboard from "views/Dashboard/InstruDashboard";
+import QnA from "views/QnA/QuestionAnswer";
 import UserProfile from "views/UserProfile/UserProfile";
 import TableList from "views/TableList/TableList";
 import Typography from "views/Typography/Typography";
@@ -9,13 +10,20 @@ import Maps from "views/Maps/Maps";
 import Notifications from "views/Notifications/Notifications";
 import Upgrade from "views/Upgrade/Upgrade";
 
+
 const dashboardRoutes = [
+  {
+    path: "/answermap",
+    name: "Answer Map",
+    icon: "pe-7s-map",
+    component: QnA
+  },
   {
     path: "/dashboard",
     name: "Admin Dashboard",
     icon: "pe-7s-graph",
     component: Dashboard
-  },
+  },    
   {
     path: "/studashboard",
     name: "Student Dashboard",
