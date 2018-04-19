@@ -1,4 +1,4 @@
-//for Admin
+//for instructor
 
 import React, { Component } from "react";
 import ChartistGraph from "react-chartist";
@@ -63,7 +63,7 @@ const mapStateToProps = state => {
   return {newCharts: state.adminVal};
 }
 
-class Dashboard extends Component {
+class InstruDashboard extends Component {
   createLegend(json) {
     var legend = [];
     for (var i = 0; i < json["names"].length; i++) {
@@ -134,7 +134,6 @@ class Dashboard extends Component {
             this.pie1xaxis = this.props.newCharts[key].xaxisLabel;
             this.pie1yaxis = this.props.newCharts[key].yaxisLabel;
             this.pie1data = this.props.newCharts[key].data;
-            //console.log(this.pie1data)
           }
           if (key == "Bar1"){
             this.bar1title = this.props.newCharts[key].title;
@@ -338,19 +337,11 @@ class Dashboard extends Component {
                 stats="Updated Recently"
                 statsIcon="fa fa-check"
                 content={
-                  <div >
-                  <PieChart width={800} height={600}>
-                    <Pie
-                      data={this.pie1data}
-                      cx={200}
-                      cy={200}
-                      outerRadius={90}
-                      fill="#82ca9d"
-                      label
-                    />
-                    <Tooltip />
-                  </PieChart>
-                    
+                  <div
+                    id="chartPreferences"
+                    className="ct-chart"
+                  >
+                    <ChartistGraph data={dataPie} type="Pie" />
                   </div>
                 }
               />
@@ -444,4 +435,4 @@ class Dashboard extends Component {
   }
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default connect(mapStateToProps)(InstruDashboard);
