@@ -36,12 +36,12 @@ const dashboardRoutes = [
     icon: "pe-7s-graph",
     component: stuDashboard
   },
-  {
-    path: "/user",
-    name: "User Profile",
-    icon: "pe-7s-user",
-    component: UserProfile
-  },
+  // {
+  //   path: "/user",
+  //   name: "User Profile",
+  //   icon: "pe-7s-user",
+  //   component: UserProfile
+  // },
   {
     path: "/table",
     name: "Leader Board",
