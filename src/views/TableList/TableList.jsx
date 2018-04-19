@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import Card from "components/Card/Card.jsx";
-import { thArray, tdArray } from "variables/Variables.jsx";
+import { thArray, tdArray,tpHeader, tpArray  } from "variables/Variables.jsx";
 
 class TableList extends Component {
   render() {
@@ -12,7 +12,7 @@ class TableList extends Component {
           <Row>
             <Col md={12}>
               <Card
-                title="LeaderBoard"
+                title="LeaderBoard I"
                 category="Students are ranked based on the total number of levels completed"
                 ctTableFullWidth
                 ctTableResponsive
@@ -40,6 +40,7 @@ class TableList extends Component {
                 }
               />
             </Col>
+
 
 
           </Row>
