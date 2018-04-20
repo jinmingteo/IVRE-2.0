@@ -57,8 +57,8 @@ class CustomizedContent extends Component{
 
 export default class QuestionAnswer extends React.Component {
   render() {
-    console.log("Props within Recharts:");
-    console.log(this.props);
+    //console.log("Props within Recharts:");
+    //console.log(this.props);
       return (
         <Row>
             <Col md={12}>

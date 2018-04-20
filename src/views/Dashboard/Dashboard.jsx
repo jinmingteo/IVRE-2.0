@@ -119,6 +119,59 @@ class Dashboard extends Component {
       this.bar6xaxis = "x-axis";
       this.bar6yaxis = "y-axis";
       this.bar6data = {x: "no data", y: 0}
+
+      for (var key in this.props.newCharts) {
+          if (key == "Cat"){
+            this.pri = this.props.newCharts[key].pri;
+            this.sec = this.props.newCharts[key].sec;
+            this.ter = this.props.newCharts[key].ter;
+          }
+          if (key == "Pie1"){
+            this.pie1title = this.props.newCharts[key].title;
+            this.pie1xaxis = this.props.newCharts[key].xaxisLabel;
+            this.pie1yaxis = this.props.newCharts[key].yaxisLabel;
+            this.pie1data = this.props.newCharts[key].data;
+            //console.log(this.pie1data)
+          }
+          if (key == "Bar1"){
+            this.bar1title = this.props.newCharts[key].title;
+            this.bar1xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar1yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar1data = this.props.newCharts[key].data;
+            //console.log(this.bar2data);
+          }
+          if (key == "Bar2"){
+            this.bar2title = this.props.newCharts[key].title;
+            this.bar2xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar2yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar2data = this.props.newCharts[key].data;
+            //console.log(this.bar2data);
+          }
+          if (key == "Bar3"){
+            this.bar3title = this.props.newCharts[key].title;
+            this.bar3xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar3yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar3data = this.props.newCharts[key].data;
+          }
+          if (key == "Bar4"){
+            this.bar4title = this.props.newCharts[key].title;
+            this.bar4xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar4yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar4data = this.props.newCharts[key].data;
+          }
+          if (key == "Bar5"){
+            this.bar5title = this.props.newCharts[key].title;
+            this.bar5xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar5yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar5data = this.props.newCharts[key].data;
+          }
+          if (key == "Bar6"){
+            this.bar6title = this.props.newCharts[key].title;
+            this.bar6xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar6yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar6data = this.props.newCharts[key].data;
+          }
+      }
   }
   
   componentWillReceiveProps(newProps) {

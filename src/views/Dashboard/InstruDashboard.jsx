@@ -104,7 +104,52 @@ class InstruDashboard extends Component {
       this.bar4xaxis = "x-axis";
       this.bar4yaxis = "y-axis";
       this.bar4data = {x: "no data", y: 0}
-      
+      for (var key in this.props.newCharts) {
+          if (key == "Cat"){
+            this.pri = this.props.newCharts[key].pri;
+            this.sec = this.props.newCharts[key].sec;
+            this.ter = this.props.newCharts[key].ter;
+          }
+          if (key == "Pie1"){
+            this.pie1title = this.props.newCharts[key].title;
+            this.pie1xaxis = this.props.newCharts[key].xaxisLabel;
+            this.pie1yaxis = this.props.newCharts[key].yaxisLabel;
+            this.pie1data = this.props.newCharts[key].data;
+          }
+          if (key == "Bar1"){
+            this.bar1title = this.props.newCharts[key].title;
+            this.bar1xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar1yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar1data = this.props.newCharts[key].data;
+            //console.log(this.bar2data);
+          }
+          if (key == "Bar2"){
+            this.bar2title = this.props.newCharts[key].title;
+            this.bar2xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar2yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar2data = this.props.newCharts[key].data;
+            //console.log(this.bar2data);
+          }
+          if (key == "Bar3"){
+            this.bar3title = this.props.newCharts[key].title;
+            this.bar3xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar3yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar3data = this.props.newCharts[key].data;
+          }
+          if (key == "Bar4"){
+            this.bar4title = this.props.newCharts[key].title;
+            this.bar4xaxis = this.props.newCharts[key].xaxisLabel;
+            this.bar4yaxis = this.props.newCharts[key].yaxisLabel;
+            this.bar4data = this.props.newCharts[key].data;
+          }
+          if (key == "Line1"){
+            this.line1title = this.props.newCharts[key].title;
+            this.line1xaxis = this.props.newCharts[key].xaxisLabel;
+            this.line1yaxis = this.props.newCharts[key].yaxisLabel;
+            this.line1data = this.props.newCharts[key].data;
+          }
+
+      }
       // this.
       // this.title1 = "title";
 

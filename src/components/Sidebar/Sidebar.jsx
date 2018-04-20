@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-
+import { NavLink, Route } from "react-router-dom";
+import {withRouter} from 'react-router'
 import HeaderLinks from "../Header/HeaderLinks.jsx";
 
 import imagine from "assets/img/sidebar-3.jpg";
@@ -39,7 +39,7 @@ class Sidebar extends Component {
         <div className="sidebar-background" style={sidebarBackground} />
         <div className="logo">
           <a
-            href="https://www.creative-tim.com"
+            href="/"
             className="simple-text logo-mini"
           >
             <div className="logo-img">
@@ -68,7 +68,7 @@ class Sidebar extends Component {
                     key={key}
                   >
                     <NavLink
-                      to={prop.path}
+                      to= {prop.path}
                       className="nav-link"
                       activeClassName="active"
                     >
@@ -85,5 +85,5 @@ class Sidebar extends Component {
     );
   }
 }
-
-export default Sidebar;
+Sidebar.defaultProps = {};
+export default withRouter(Sidebar);

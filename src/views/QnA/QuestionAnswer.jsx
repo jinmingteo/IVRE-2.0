@@ -7,22 +7,13 @@ import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
 import { Treemap, Tooltip} from "recharts";
 import QuestionAnswer from './QnAComp.js'
+
 const mapStateToProps = state => {
   return {newCharts: state.ansVal};
 }
 
-
 class AnswerMap extends Component {
-  createLegend(json) {
-    var legend = [];
-    for (var i = 0; i < json["names"].length; i++) {
-      var type = "fa fa-circle text-" + json["types"][i];
-      legend.push(<i className={type} key={i} />);
-      legend.push(" ");
-      legend.push(json["names"][i]);
-    }
-    return legend;
-  }
+  
   constructor(props) {
       super(props);
       //this.state = this.props
@@ -43,7 +34,7 @@ class AnswerMap extends Component {
       var ind = 0;
       var vic=0;
       console.log("newstuff");
-      console.log(this.props.newCharts);
+      //console.log(this.props.newCharts);
       for (var key in this.props.newCharts) {
         if (this.props.newCharts[key].style ==='recharts'){
           this.rechartsArr[ind]=this.props.newCharts[key]

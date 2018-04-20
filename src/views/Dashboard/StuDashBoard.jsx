@@ -1,7 +1,6 @@
 //for Student
 
 import React, { Component } from "react";
-import ChartistGraph from "react-chartist";
 import { Grid, Row, Col } from "react-bootstrap";
 import { connect } from 'react-redux';
 import { Card } from "components/Card/Card.jsx";
@@ -33,6 +32,11 @@ import {
 } from "recharts";
 import { BarChart, Bar } from "recharts";
 
+
+const mapStateToProps = state => {
+  return {newCharts: state.stuVal};
+}
+
 const AxisLabel = ({
   axisType,
   x = 0,
@@ -59,9 +63,6 @@ const AxisLabel = ({
   );
 };
 
-const mapStateToProps = state => {
-  return {newCharts: state.stuVal};
-}
 
 class Dashboard extends Component {
   createLegend(json) {
@@ -77,8 +78,7 @@ class Dashboard extends Component {
 
   constructor(props) {
       super(props);
-      this.state = this.props
-      this.rechartsArr = [];
+      //this.state = this.props
       //console.log(props.newCharts);
       this.stuname = "name";
       this.stulevel = 0;
@@ -87,7 +87,20 @@ class Dashboard extends Component {
       this.line1title = "title";
       this.line1xaxis = "x-axis";
       this.line1yaxis = "y-axis";
-      this.line1data = {x: "no data", y: 0}
+      this.line1data = [];
+      for (var key in this.props.newCharts) {
+          if (key === "Line1"){
+            this.line1title = this.props.newCharts[key].title;
+            this.line1xaxis = this.props.newCharts[key].xaxisLabel;
+            this.line1yaxis = this.props.newCharts[key].yaxisLabel;
+            this.line1data = this.props.newCharts[key].data;
+          }
+          if (key === "Cat"){
+            this.stuname = this.props.newCharts[key].name;
+            this.stulevel = this.props.newCharts[key].levels;
+            this.rank = this.props.newCharts[key].rank;
+          }
+      }
   }
   
   componentWillReceiveProps(newProps) {
@@ -96,13 +109,13 @@ class Dashboard extends Component {
       console.log("newstuff");
       console.log(this.props.newCharts);
       for (var key in this.props.newCharts) {
-          if (key == "Line1"){
+          if (key === "Line1"){
             this.line1title = this.props.newCharts[key].title;
             this.line1xaxis = this.props.newCharts[key].xaxisLabel;
             this.line1yaxis = this.props.newCharts[key].yaxisLabel;
             this.line1data = this.props.newCharts[key].data;
           }
-          if (key == "Cat"){
+          if (key === "Cat"){
             this.stuname = this.props.newCharts[key].name;
             this.stulevel = this.props.newCharts[key].levels;
             this.rank = this.props.newCharts[key].rank;

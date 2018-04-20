@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import store from "./variables/store.js";
 //import { BrowserRouter } from "react-router-dom";
 //in thise case we use hashroute. should switch if encounter problems
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import firebase from "firebase";
 import indexRoutes from "routes/index.jsx";
 import { Provider } from "react-redux";
@@ -77,14 +77,14 @@ db.ref("/insCharts").on("value", data => {
 });
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter>
   	<Provider store={store}>      
     <Switch>
       {indexRoutes.map((prop, key) => {
-        return <Route to={prop.path} component={prop.component} key={key} />;
+        return <Route to={prop.path} exact component={prop.component} key={key} />;
       })}
     </Switch>
     </Provider>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
