@@ -248,26 +248,26 @@ var style = {
 // //
 //
 const thArray = ["Rank", "Name","Total Completion"];
-const tdArray = [[1, '18Y3J QIANG JIAYUAN', 370],
- [2, '18Y4L KOH PI RONG', 364],
- [3, '18Y3K CHOY QI HUI', 224],
- [4, '18Y3K LEO QIYI JOEL', 182],
+const tdArray = [[1, '18Y3J QIANG JIAYUAN', 368],
+ [2, '18Y4L KOH PI RONG', 360],
+ [3, '18Y3K CHOY QI HUI', 223],
+ [4, '18Y3K LEO QIYI JOEL', 180],
  [5, '18Y2H YAP YU HUNG KIMI', 158],
- [6, '18Y3I CHOU BI YU', 152],
- [7, '18Y2J LIM YU WEI', 119],
+ [6, '18Y3I CHOU BI YU', 150],
+ [7, '18Y2J LIM YU WEI', 118],
  [8, '18Y4J CHEN CHEN', 116],
- [9, '18Y4L TAN KAI YI NICHOLAS', 115],
+ [9, '18Y4L TAN KAI YI NICHOLAS', 114],
  [10, '18Y4K KEVAN WEE JIA WEI', 104],
  [11, '18Y3D LIN JUNYU', 101],
  [12, '18Y2J CHEN XINYI', 98],
- [13, '18Y4L CHEN WUYANG', 89],
- [14, '18Y4L EMILY ONG HUI QI', 88],
- [15, '18Y1J VICKY ANG XIN EN', 85],
- [16, '18Y4J ERNUS HO ZHI YU', 84],
+ [13, '18Y4L CHEN WUYANG', 88],
+ [14, '18Y4L EMILY ONG HUI QI', 87],
+ [15, '18Y4J ERNUS HO ZHI YU', 84],
+ [16, '18Y1J VICKY ANG XIN EN', 84],
  [17, 'Anirudha Saraf', 82],
  [18, '18Y1J YU KAI XI GABRIELLE', 76],
- [19, '18Y3H JAKE KEE CHONG HAN', 69],
- [20, '18Y2D TAN RUI YANG', 68]];
+ [19, '18Y2D TAN RUI YANG', 68],
+ [20, '18Y3H JAKE KEE CHONG HAN', 68]]
 
  // const tpHeader = ["Rank", "Name","Participation"];
  // const tpArray = [[1, '18Y1I LI TING YEE JADE', 466],
