@@ -228,27 +228,27 @@ class Dashboard extends Component {
                       width={300}
                       height={300}
                       data={this.bar1data}
-                      margin={{ top: 5, right: 40, left: 0, bottom: 40 }}
+                      margin={{ top: 0, right: 40, left: 0, bottom: 40 }}
                       >
                       <XAxis
                         dataKey="x"
                         label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
+                          <AxisLabel axisType="xAxis" width={300} height={270}>
                             {this.bar1xaxis}
                           </AxisLabel>
                         }
                       />
                       <YAxis
                         dataKey="y"
-                        label={
-                          <AxisLabel axisType="yAxis" width={400} height={300}>
-                            {this.bar1yaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="yAxis" width={400} height={300}>
+                        //     {this.bar1yaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
+                      <Legend verticalAlign="bottom" align="right"/>
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -272,11 +272,11 @@ class Dashboard extends Component {
                       >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar2xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar2xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -288,7 +288,7 @@ class Dashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
+                      <Legend verticalAlign="bottom" align="right"/>
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -312,11 +312,11 @@ class Dashboard extends Component {
                       >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar3xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar3xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -328,7 +328,7 @@ class Dashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
+                      <Legend verticalAlign="bottom" align="right"/>
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -383,11 +383,11 @@ class Dashboard extends Component {
                       >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar4xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar4xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -423,11 +423,11 @@ class Dashboard extends Component {
                       >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar5xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar5xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -465,11 +465,11 @@ class Dashboard extends Component {
                     >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar6xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar6xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"

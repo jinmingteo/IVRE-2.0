@@ -186,11 +186,11 @@ class InstruDashboard extends Component {
                     >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar1xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar1xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -228,11 +228,11 @@ class InstruDashboard extends Component {
                     >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar2xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar2xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -268,11 +268,11 @@ class InstruDashboard extends Component {
                     >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar3xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar3xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -310,11 +310,11 @@ class InstruDashboard extends Component {
                     >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar4xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar4xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
@@ -347,15 +347,15 @@ class InstruDashboard extends Component {
                         <Line type="monotone" dataKey="y" stroke="#8884d8" />
                         <XAxis
                           dataKey="x"
-                          label={
-                            <AxisLabel axisType="xAxis" width={400} height={300}>
-                              {this.line1xaxis}
-                            </AxisLabel>
-                          }
+                          // label={
+                          //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                          //     {this.line1xaxis}
+                          //   </AxisLabel>
+                          // }
                         />
                         <YAxis
                           label={
-                            <AxisLabel axisType="yAxis" width={400} height={300}>
+                            <AxisLabel axisType="yAxis" width={400} height={330}>
                               {this.line1yaxis}
                             </AxisLabel>
                           }
