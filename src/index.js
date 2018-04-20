@@ -76,6 +76,11 @@ db.ref("/insCharts").on("value", data => {
   }
 });
 
+let yourUrl = "https://bez0bduow5.execute-api.us-east-2.amazonaws.com/finished/testlambda"
+fetch(yourUrl, { mode: "no-cors" }).then(function(response) {
+      console.log("Fetched ", yourUrl);
+    });
+
 ReactDOM.render(
   <HashRouter>
   	<Provider store={store}>      
