@@ -2,7 +2,7 @@
 
 **[IVRE](https://dashboard-10955.firebaseapp.com/)** Integrated Virtual Reviewing Environment (IVRE) serves as a platform for students and instructors to review their educational progress. Our product strives to enhance students’ learning experience and ensure that no student is lack behind. Bundled with CodeCombat, instructors will be able to oversee their students’ holistic performances. On IVRE, students will also be able to gauge their individual performance.
 
-**IVRE has two main goals that it wishes to achieve. Firstly, it aims to provide a dashboard for instructors and the administrators. A dashboard that gives concrete reviews and updates about their students’ performance and provides valuable insights from how students’ performance in CodeCombat. Secondly, IVRE lets students gauge their personal performance compared to their peers. There will be individual CodeCombat profile and a leaderboard that features the top 20 students in CodeCombat. 
+IVRE has two main goals that it wishes to achieve. Firstly, it aims to provide a dashboard for instructors and the administrators. A dashboard that gives concrete reviews and updates about their students’ performance and provides valuable insights from how students’ performance in CodeCombat. Secondly, IVRE lets students gauge their personal performance compared to their peers. There will be individual CodeCombat profile and a leaderboard that features the top 20 students in CodeCombat. 
 
 
 
