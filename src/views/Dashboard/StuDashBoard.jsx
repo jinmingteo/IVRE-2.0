@@ -120,6 +120,10 @@ class Dashboard extends Component {
             this.stulevel = this.props.newCharts[key].levels;
             this.rank = this.props.newCharts[key].rank;
           }
+          if (key === "photo"){
+            this.photo = this.props.newCharts[key][this.stuname];
+            //console.log(this.photo)
+          }
       }
     }
   }
@@ -131,7 +135,7 @@ class Dashboard extends Component {
           <Row>
             <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-id" />}
+                bigIcon={<img src={this.photo} />}
                 statsText="Name"
                 statsValue= {this.stuname}
                 //statsIcon={<i className="fa fa-refresh" />}
