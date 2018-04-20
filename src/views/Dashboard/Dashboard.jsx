@@ -363,19 +363,19 @@ class Dashboard extends Component {
                       >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={400} height={300}>
-                            {this.bar3xaxis}
-                          </AxisLabel>
-                        }
+                        // label={
+                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
+                        //     {this.bar3xaxis}
+                        //   </AxisLabel>
+                        // }
                       />
                       <YAxis
                         dataKey="y"
-                        // label={
-                        //   <AxisLabel axisType="yAxis" width={400} height={300}>
-                        //     {this.bar3yaxis}
-                        //   </AxisLabel>
-                        // }
+                        label={
+                          <AxisLabel axisType="yAxis" width={400} height={300}>
+                            {this.bar3yaxis}
+                          </AxisLabel>
+                        }
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
