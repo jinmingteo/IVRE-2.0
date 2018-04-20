@@ -15,11 +15,7 @@ IVRE has two main goals that it wishes to achieve. Firstly, it aims to provide a
 
 ## UserGuide:
 
-### Word Map:
-IVRE also let instructors and students to get an overview of open ended QnA. 
-With the help of a WordMap, a summary of students’ answers for the assignment can be seen. 
-
-For example, in the BT3103 assignments, the instructor has asked students to give the topics (usually, one worded) mentioned in the video. With WordMap, this can be analysed easily.
+### Answer Map:
 
 
 ### Administrator:
@@ -45,9 +41,18 @@ By clicking on the Instructor Dahboard button in the sidebar, there are 5 charts
 4. Learning curve of a particular student: The instructor is allowed to zoom into one particular student's learning curve, which is the number of actions per week and plotted in a line chart.
 
 ### Student: 
+For student to gauge their personal performance among their peers
+1. An overviename: The overview shows the name of the student, the number of levels the student user has been completed and his or her current rank in the course. 
+2. Participation summary which has been optimised from our first version. Originally it only showed the number of level completed in each week. Currently, it shows the the playtime user spent and average playtime in the course in each week. This shows a more direct comparison to see how active the user is relatively to his fellow peers in the same course
+ 
+Leaderboard:
+A dashboard which can be accessed by both instructors and students. 
+Top 20 students with highest number of levels completed
 
 
-###Leaderboard: 
+### Leaderboard: 
+A dashboard which can be accessed by both instructors and students. 
+It shows the top 20 students with highest number of levels completed. 
 
 
 
