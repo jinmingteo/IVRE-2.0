@@ -13,8 +13,8 @@ import Upgrade from "views/Upgrade/Upgrade";
 
 const dashboardRoutes = [
   {
-    path: "/answermap",
-    name: "Answer Map",
+    path: "/wordmap",
+    name: "Word Map",
     icon: "pe-7s-map",
     component: QnA
   },
