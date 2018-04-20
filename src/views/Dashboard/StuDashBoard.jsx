@@ -100,6 +100,10 @@ class Dashboard extends Component {
             this.stulevel = this.props.newCharts[key].levels;
             this.rank = this.props.newCharts[key].rank;
           }
+          if (key === "photo"){
+            this.photo = this.props.newCharts[key][this.stuname];
+            //console.log(this.photo)
+          }
       }
   }
   
