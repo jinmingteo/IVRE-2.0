@@ -11,7 +11,7 @@ IVRE has two main goals that it wishes to achieve. Firstly, it aims to provide a
 
 + [Live Preview](https://dashboard-10955.firebaseapp.com/)
 + [Youtube Video]()
-+ [Notebook] (https://colab.research.google.com/drive/1bH-td7R2Ic7U3FpAMYkIkEaSM64n3Uhq)
++ [Notebook](https://colab.research.google.com/drive/1bH-td7R2Ic7U3FpAMYkIkEaSM64n3Uhq)
 
 ## UserGuide:
 
