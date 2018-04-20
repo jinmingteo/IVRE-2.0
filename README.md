@@ -24,13 +24,13 @@ For example, in the BT3103 assignments, the instructor has asked students to giv
 
 
 ### Administrator:
-A dashboard that oversees all performance, providing demographics and essential information of each course or cohort 
+A dashboard that oversees all performance, providing demographics and essential information of each course or cohort. 
 It aims to help admin team to facilitate the revise of the design of application and the curriculum for codecombat.
 
 1. The overall picture of distribution of participants in the three cohorts：In this case, it can easily be identified that primary stream is the potential target to expand the usage. Relevant campaigns can be organised to promote codecombat to the primary school students.
-2. Number of participants of each school in each cohort
-3. an overview of user distributions among all courses
-4. average playtime in each course last week: This chart is to gauge the overall usage of CodeCombat. For example,it is the most commonly & frequently used in NUSHS-senior while some schools have yet started the use of CodeCombat such as Jurong JC (there is course but playtime=0)
+2. Number of participants of each school in each cohort.
+3. An overview of user distributions among all courses.
+4. Average playtime in each course last week: This chart is to gauge the overall usage of CodeCombat. For example,it is the most commonly & frequently used in NUSHS-senior while some schools have yet started the use of CodeCombat such as Jurong JC (there is course but playtime=0)
 5. Admin users can also zoom into one particular course to see more detailed usage information. Here we use Duman High School-junior as example for sake of demonstration. It shows the average playtime of students in the course over the past 6 weeks. The stats shows an pleasing increase in the average playtime -> our promotion in DHS-junior has been successful
 6. Bar chart showing admin users the hardest 20 levels in CodeCombat based on the average time spent by the users to complete. As shown, level “blind distance” roughly takes users around one hour to complete compared to the rest of the levels which vary within 30mins. This shows that “blind distance” may be too demanding and helps the admin team to reflect on the difficulty of each level  and revise the syllabus of codecombat accordingly. 
 
@@ -47,7 +47,7 @@ By clicking on the Instructor Dahboard button in the sidebar, there are 5 charts
 
 ### Student: 
 For student to gauge their personal performance among their peers
-1. An overviename: The overview shows the name of the student, the number of levels the student user has been completed and his or her current rank in the course. 
+1. An overview of the profile: The overview shows the name of the student, the number of levels the student user has been completed and his or her current rank in the course. 
 2. Participation summary which has been optimised from our first version. Originally it only showed the number of level completed in each week. Currently, it shows the the playtime user spent and average playtime in the course in each week. This shows a more direct comparison to see how active the user is relatively to his fellow peers in the same course
 
 ### Leaderboard: 
