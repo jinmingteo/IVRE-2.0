@@ -1,5 +1,5 @@
 import Dashboard from "views/Dashboard/Dashboard";
-import stuDashboard from "views/Dashboard/StuDashBoard";
+import stuDashboard from "views/Dashboard/StuDashboard";
 import InstruDashboard from "views/Dashboard/InstruDashboard";
 import QnA from "views/QnA/QuestionAnswer";
 import UserProfile from "views/UserProfile/UserProfile";
@@ -21,7 +21,7 @@ const dashboardRoutes = [
   {
     path: "/dashboard",
     name: "Admin Dashboard",
-    icon: "pe-7s-graph",
+    icon: "pe-7s-display1",
     component: Dashboard
   },
   {
@@ -33,7 +33,7 @@ const dashboardRoutes = [
   {
     path: "/studashboard",
     name: "Student Dashboard",
-    icon: "pe-7s-graph",
+    icon: "pe-7s-glasses",
     component: stuDashboard
   },
   // {
