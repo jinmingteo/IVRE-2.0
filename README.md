@@ -15,7 +15,20 @@ IVRE has two main goals that it wishes to achieve. Firstly, it aims to provide a
 
 ## UserGuide:
 
+### Answer Map:
+
+
 ### Administrator:
+A dashboard that oversees all performance, providing demographics and essential information of each course or cohort 
+It aims to help admin team to facilitate the revise of the design of application and the curriculum for codecombat.
+
+1. The overall picture of distribution of participants in the three cohorts：In this case, it can easily be identified that primary stream is the potential target to expand the usage. Relevant campaigns can be organised to promote codecombat to the primary school students.
+2. Number of participants of each school in each cohort
+3. an overview of user distributions among all courses
+4. average playtime in each course last week: This chart is to gauge the overall usage of CodeCombat. For example,it is the most commonly & frequently used in NUSHS-senior while some schools have yet started the use of CodeCombat such as Jurong JC (there is course but playtime=0)
+5. Admin users can also zoom into one particular course to see more detailed usage information. Here we use Duman High School-junior as example for sake of demonstration. It shows the average playtime of students in the course over the past 6 weeks. The stats shows an pleasing increase in the average playtime -> our promotion in DHS-junior has been successful
+6. Bar chart showing admin users the hardest 20 levels in CodeCombat based on the average time spent by the users to complete. As shown, level “blind distance” roughly takes users around one hour to complete compared to the rest of the levels which vary within 30mins. This shows that “blind distance” may be too demanding and helps the admin team to reflect on the difficulty of each level  and revise the syllabus of codecombat accordingly. 
+
 
 
 ### Instructor:
@@ -28,6 +41,11 @@ By clicking on the Instructor Dahboard button in the sidebar, there are 5 charts
 4. Learning curve of a particular student: The instructor is allowed to zoom into one particular student's learning curve, which is the number of actions per week and plotted in a line chart.
 
 ### Student: 
+
+###Leaderboard: 
+
+
+
 
 
 
