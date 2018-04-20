@@ -247,7 +247,6 @@ class InstruDashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -289,7 +288,6 @@ class InstruDashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -329,7 +327,6 @@ class InstruDashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -371,7 +368,6 @@ class InstruDashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -407,7 +403,6 @@ class InstruDashboard extends Component {
                         />
                         <CartesianGrid strokeDasharray="3 3" />
                         <Tooltip />
-                        <Legend />
                       </LineChart>
                   </div>
                 }

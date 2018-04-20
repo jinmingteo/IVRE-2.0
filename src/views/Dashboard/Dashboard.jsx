@@ -285,23 +285,22 @@ class Dashboard extends Component {
                       >
                       <XAxis
                         dataKey="x"
-                        label={
-                          <AxisLabel axisType="xAxis" width={300} height={270}>
-                            {this.bar1xaxis}
-                          </AxisLabel>
-                        }
-                      />
-                      <YAxis
-                        dataKey="y"
                         // label={
-                        //   <AxisLabel axisType="yAxis" width={400} height={300}>
-                        //     {this.bar1yaxis}
+                        //   <AxisLabel axisType="xAxis" width={300} height={270}>
+                        //     {this.bar1xaxis}
                         //   </AxisLabel>
                         // }
                       />
+                      <YAxis
+                        dataKey="y"
+                        label={
+                          <AxisLabel axisType="yAxis" width={400} height={300}>
+                            {this.bar1yaxis}
+                          </AxisLabel>
+                        }
+                      />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend verticalAlign="bottom" align="right"/>
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -341,7 +340,6 @@ class Dashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend verticalAlign="bottom" align="right"/>
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -365,23 +363,22 @@ class Dashboard extends Component {
                       >
                       <XAxis
                         dataKey="x"
-                        // label={
-                        //   <AxisLabel axisType="xAxis" width={400} height={300}>
-                        //     {this.bar3xaxis}
-                        //   </AxisLabel>
-                        // }
-                      />
-                      <YAxis
-                        dataKey="y"
                         label={
-                          <AxisLabel axisType="yAxis" width={400} height={300}>
-                            {this.bar3yaxis}
+                          <AxisLabel axisType="xAxis" width={400} height={300}>
+                            {this.bar3xaxis}
                           </AxisLabel>
                         }
                       />
+                      <YAxis
+                        dataKey="y"
+                        // label={
+                        //   <AxisLabel axisType="yAxis" width={400} height={300}>
+                        //     {this.bar3yaxis}
+                        //   </AxisLabel>
+                        // }
+                      />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend verticalAlign="bottom" align="right"/>
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -452,7 +449,6 @@ class Dashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -492,7 +488,6 @@ class Dashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
@@ -534,7 +529,6 @@ class Dashboard extends Component {
                       />
                       <CartesianGrid strokeDasharray="3 3" />
                       <Tooltip />
-                      <Legend />
                       <Bar dataKey="y" fill="#8884d8" />
                     </BarChart>
                   </div>
