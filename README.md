@@ -1,4 +1,5 @@
 # [IVRE](https://dashboard-10955.firebaseapp.com/)
+![Admin Dashboard](IVRE.png)
 
 **[IVRE](https://dashboard-10955.firebaseapp.com/)** Integrated Virtual Reviewing Environment (IVRE) serves as a platform for students and instructors to review their educational progress. Our product strives to enhance students’ learning experience and ensure that no student is lack behind. Bundled with CodeCombat, instructors will be able to oversee their students’ holistic performances. On IVRE, students will also be able to gauge their individual performance.
 
@@ -10,11 +11,12 @@ IVRE has two main goals that it wishes to achieve. Firstly, it aims to provide a
 
 + [Live Preview](https://dashboard-10955.firebaseapp.com/)
 + [Youtube Video]()
++ [Notebook] (https://colab.research.google.com/drive/1bH-td7R2Ic7U3FpAMYkIkEaSM64n3Uhq)
 
 ## UserGuide:
 
 ### Administrator:
-![Admin Dashboard](IVRE.png)
+
 
 ### Instructor:
 As a instructor, what the user cares the most is how his students are doing with their academics currently, what he can help them if they meet any problems, and how he can improve on the curriculum that the school is delivering to the students. 
