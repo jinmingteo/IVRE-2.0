@@ -139,7 +139,7 @@ class Dashboard extends Component {
           <Row>
             <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<img src={this.photo} />}
+                bigIcon={<img src={this.photo} height="100" width="100"/>}
                 statsText="Name"
                 statsValue= {this.stuname}
                 //statsIcon={<i className="fa fa-refresh" />}
